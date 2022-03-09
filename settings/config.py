@@ -8,7 +8,7 @@ HOST = "0.0.0.0"
 PORT = 80
 
 # Swagger Documentation
-API = {"title": "Bidamic 🚀"}
+API = {"title": "Bidnamic 🚀"}
 
 # General
 ROOT_PATH = "/api/v1"
@@ -92,7 +92,7 @@ You will be able to:
 
 ## 🙋 Users
 Only for registered users:
-* **View and edit** personal information
+* **View** personal information
 
 <hr>
 """
