@@ -44,21 +44,21 @@ class Campaigns(Base):
     __tablename__ = "campaigns"
     __table_args__ = {'extend_existing': True}
 
-    id = Column(Integer, index=True, primary_key=True)
-    campaign_id = Column(BIGINT, unique=True)
+    id = Column(BIGINT, primary_key=True, autoincrement=True)
+    campaign_id = Column(BIGINT)  # Duplicate values in the CSV can not be a primary key
     structure_value = Column(VARCHAR)
-    status = Column(Enum("ENABLED, REMOVED", name='status'))
+    status = Column(VARCHAR)
 
 
 class AddGroups(Base):
     __tablename__ = "add_groups"
     __table_args__ = {'extend_existing': True}
 
-    id = Column(Integer, index=True, primary_key=True)
-    ad_group_id = Column(BIGINT)
-    campaign_id = Column(BIGINT)
-    alias = Column(VARCHAR)
-    status = Column(Enum("ENABLED, REMOVED", name='status'))
+    id = Column(BIGINT, primary_key=True, autoincrement=True)
+    ad_group_id = Column(BIGINT)  # Duplicate values in the CSV can not be a primary key as should
+    campaign_id = Column(BIGINT)  # Duplicate values in the CSV can not be a foreign key Campaigns.campaign_id as should
+    alias = Column(TEXT)
+    status = Column(VARCHAR)
 
 
 class SearchItems(Base):
@@ -67,13 +67,13 @@ class SearchItems(Base):
 
     id = Column(Integer, index=True, primary_key=True)
     date = Column(Date)
-    ad_group_id = Column(Float)
-    campaign_id = Column(BIGINT)
-    clicks = Column(Integer, default=0)
-    cost = Column(Float, default=0.0)
-    conversion_value = Column(Integer, default=0)
-    conversions = Column(Integer, default=0)
-    search_item = Column(String)
+    ad_group_id = Column(BIGINT)  # Duplicate values in the CSV can not be a foreign key AddGroups.ad_group_id as should
+    campaign_id = Column(BIGINT)  # Duplicate values in the CSV can not be a foreign key Campaigns.campaign_id as should
+    clicks = Column(INTEGER, default=0)
+    cost = Column(FLOAT, default=0.0)
+    conversion_value = Column(INTEGER, default=0)
+    conversions = Column(INTEGER, default=0)
+    search_term = Column(VARCHAR)
 
 
 class Sessions(Base):
