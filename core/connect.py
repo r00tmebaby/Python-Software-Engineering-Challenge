@@ -1,12 +1,13 @@
+import asyncio
 import os.path
-from typing import Any
-
-from pydantic import BaseModel
+import sys
+from typing import Any, Optional
 from sqlalchemy.orm import sessionmaker
 from models.database import *
 from settings.config import DATABASE_URL
 from sqlalchemy_utils import database_exists, create_database
 import pandas
+import typer
 
 connect = create_engine(DATABASE_URL)
 
@@ -19,18 +20,27 @@ Session = sessionmaker(connect)
 session = Session()
 
 
-def create_data(model: Any, filepath: str) -> None:
-    if os.path.isfile(filepath):
-        pandas.read_csv(filepath).to_sql(
-            con=connect,
-            name=model.__tablename__,
-            if_exists="append",
-            index=False
-        )
-    else:
-        raise FileNotFoundError(f"File {filepath} can not be found")
+async def csv2sql(model: Any, filepath: str, add_always: Optional[bool] = False) -> None:
+    if len(session.query(model).all()) == 0:
+        if os.path.isfile(filepath):
+            pandas.read_csv(filepath).to_sql(
+                con=connect,
+                name=model.__tablename__,
+                if_exists="append",
+                index=False
+            )
+        else:
+            raise FileNotFoundError(f"File {filepath} can not be found")
 
 
-create_data(Campaigns, "csv/campaigns.csv")
-create_data(AddGroups, "csv/adgroups.csv")
-create_data(SearchItems, "csv/search_terms.csv")
+async def add_records():
+    # Assuming that we may have a JSON config file in future
+    models = {
+        "Campaigns": "csv/campaigns.csv",
+        "SearchItems": "csv/search_terms.csv",
+        "AddGroups": "csv/adgroups.csv"
+    }
+
+    for i, model in enumerate(models):
+        await csv2sql(eval(model), models[model])
+        sys.stdout.write('\r' + f"Processing {models[model]}\n")

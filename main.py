@@ -1,3 +1,4 @@
+import asyncio
 import os
 import pathlib
 from http.client import HTTPException
@@ -6,6 +7,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi_utils.tasks import repeat_every
 from core.authentication import delete_expired_sessions
+from core.connect import add_records
 from core.exception_handler import *
 from endpoints import (
     auth,
@@ -42,6 +44,10 @@ async def repeater() -> None:
 
 
 if __name__ == '__main__':
+
+    # Adding csv records in the database if empty
+    asyncio.run(add_records())
+
     uvicorn.run(
         "main:route",
         host=HOST,
