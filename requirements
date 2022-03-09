@@ -1,0 +1,4 @@
+python-jose[cryptography]
+fastapi
+python-multipart
+validators

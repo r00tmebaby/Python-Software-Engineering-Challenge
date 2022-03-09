@@ -1,0 +1,5 @@
+StatReload detected file change in 'core\connect.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [2424]
+Waiting for application startup.
+Application startup complete.
