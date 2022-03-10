@@ -2,4 +2,6 @@ python-jose[cryptography]
 fastapi
 python-multipart
 validators
+sqlalchemy
 pandas
+typing

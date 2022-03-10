@@ -26,3 +26,12 @@ class UsersList(BaseModel):
     current_page: int
     has_more: bool
     data: List[User]
+
+
+class SearchResponse(BaseModel):
+    total_users: int
+    pages: int
+    per_page: int
+    current_page: int
+    has_more: bool
+    data: List[User]

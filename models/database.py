@@ -51,7 +51,7 @@ class Campaigns(Base):
 
 
 class AddGroups(Base):
-    __tablename__ = "add_groups"
+    __tablename__ = "adgroups"
     __table_args__ = {'extend_existing': True}
 
     id = Column(BIGINT, primary_key=True, autoincrement=True)
@@ -62,7 +62,7 @@ class AddGroups(Base):
 
 
 class SearchItems(Base):
-    __tablename__ = "search_items"
+    __tablename__ = "search_terms"
     __table_args__ = {'extend_existing': True}
 
     id = Column(Integer, index=True, primary_key=True)

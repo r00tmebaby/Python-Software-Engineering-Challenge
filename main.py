@@ -1,7 +1,6 @@
 import asyncio
 import os
 import pathlib
-from http.client import HTTPException
 
 import uvicorn
 from fastapi import FastAPI
@@ -12,7 +11,8 @@ from core.exception_handler import *
 from endpoints import (
     auth,
     users,
-    default
+    default,
+    search
 )
 from settings.config import API, HOST, PORT
 
@@ -32,7 +32,9 @@ route.add_exception_handler(HTTPException, http_exception_handler)
 
 # Add the routers (endpoints)
 route.include_router(default.router)  # Not visible -> Redirects to the API documentation
+
 route.include_router(auth.router)
+route.include_router(search.router)
 route.include_router(users.router)
 
 

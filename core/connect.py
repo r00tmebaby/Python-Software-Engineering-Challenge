@@ -7,7 +7,6 @@ from models.database import *
 from settings.config import DATABASE_URL
 from sqlalchemy_utils import database_exists, create_database
 import pandas
-import typer
 
 connect = create_engine(DATABASE_URL)
 
@@ -41,6 +40,6 @@ async def add_records():
         "AddGroups": "csv/adgroups.csv"
     }
 
-    for i, model in enumerate(models):
+    for model in models:
         await csv2sql(eval(model), models[model])
         sys.stdout.write('\r' + f"Processing {models[model]}\n")

@@ -1,0 +1,1607 @@
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [17292]
+Waiting for application startup.
+Application startup complete.
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+StatReload detected file change in 'models\requests.py'. Reloading...
+Will watch for changes in these directories: ['C:\\Users\\zdgeorgi\\PycharmProjects\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+Started reloader process [11816] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [27948]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:64074 - "GET /docs HTTP/1.1" 200
+127.0.0.1:64074 - "GET /openapi.json HTTP/1.1" 200
+StatReload detected file change in 'main.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [19768]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:64085 - "GET /docs HTTP/1.1" 200
+127.0.0.1:64085 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'ModelMetaclass' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [26376]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51637 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51637 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:51637 - "GET /%7B HTTP/1.1" 401
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [22292]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51650 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51650 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:51651 - "GET / HTTP/1.1" 307
+127.0.0.1:51651 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51658 - "GET / HTTP/1.1" 307
+127.0.0.1:51658 - "GET /docs HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [22144]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51663 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51663 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'ModelMetaclass' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [23052]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51674 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51674 - "GET /openapi.json HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [24596]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51698 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51698 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [1564]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51708 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51708 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [12828]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51718 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51718 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+127.0.0.1:51719 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51719 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+127.0.0.1:51724 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51724 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [26208]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51726 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51726 - "GET /openapi.json HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [11084]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51733 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51733 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+127.0.0.1:51734 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51734 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [9752]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51740 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51740 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+127.0.0.1:51741 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51741 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [23692]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51753 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51753 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+127.0.0.1:51754 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51754 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+127.0.0.1:51755 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51755 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [10864]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51757 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51757 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+127.0.0.1:51758 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51758 - "GET /openapi.json HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 216, in openapi
+    return JSONResponse(self.openapi())
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 191, in openapi
+    self.openapi_schema = get_openapi(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 419, in get_openapi
+    result = get_openapi_path(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 219, in get_openapi_path
+    operation_parameters = get_openapi_operation_parameters(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\openapi\utils.py", line 102, in get_openapi_operation_parameters
+    "schema": field_schema(
+  File "pydantic\schema.py", line 251, in pydantic.schema.field_schema
+  File "pydantic\schema.py", line 219, in pydantic.schema.get_field_info_schema
+  File "pydantic\schema.py", line 986, in pydantic.schema.encode_default
+  File "pydantic\json.py", line 97, in pydantic.json.pydantic_encoder
+TypeError: Object of type 'EnumMeta' is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [25980]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:51770 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51770 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:51771 - "GET /?order_by=ASC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:51771 - "GET /docs HTTP/1.1" 200
+127.0.0.1:51773 - "GET /?order_by=ASC&search_type=structure_value&sort_by=roas&limit=4 HTTP/1.1" 307
+127.0.0.1:51773 - "GET /docs HTTP/1.1" 200
+127.0.0.1:65026 - "GET /user/2 HTTP/1.1" 400
+127.0.0.1:65026 - "GET /user/1 HTTP/1.1" 400
+127.0.0.1:65026 - "GET /user/123123 HTTP/1.1" 400
+127.0.0.1:65026 - "GET /user/11 HTTP/1.1" 400
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [26380]
+Waiting for application startup.
+Application startup complete.
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [7780]
+Waiting for application startup.
+Application startup complete.
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [1212]
+Waiting for application startup.
+Application startup complete.
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [8020]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56359 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56359 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:56359 - "GET /?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56359 - "GET /docs HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [1556]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56378 - "GET /?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56378 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56378 - "GET /?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56378 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56378 - "GET /?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56378 - "GET /docs HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [11424]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56384 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56384 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:56384 - "GET /?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56384 - "GET /docs HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [27384]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56391 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56391 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:56391 - "GET /?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56391 - "GET /docs HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [6816]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56409 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56409 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:56409 - "GET /?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56409 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56410 - "GET /?order_by=DESC&search_type=alias&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56410 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56416 - "GET /?order_by=DESC&search_type=alias&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56416 - "GET /docs HTTP/1.1" 200
+Stopping reloader process [11816]
+Will watch for changes in these directories: ['C:\\Users\\zdgeorgi\\PycharmProjects\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+Started reloader process [25500] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [25152]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56431 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56431 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:56431 - "GET /?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 307
+127.0.0.1:56431 - "GET /docs HTTP/1.1" 200
+Shutting down
+Waiting for application shutdown.
+Application shutdown complete.
+Finished server process [25152]
+Will watch for changes in these directories: ['C:\\Users\\zdgeorgi\\PycharmProjects\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:80 (Press CTRL+C to quit)
+Started reloader process [11576] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [23476]
+Waiting for application startup.
+Application startup complete.
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [10432]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56452 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56452 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:56452 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 401
+127.0.0.1:56453 - "POST /session HTTP/1.1" 401
+127.0.0.1:56453 - "POST /session HTTP/1.1" 401
+127.0.0.1:56466 - "POST /user HTTP/1.1" 200
+127.0.0.1:56466 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 401
+127.0.0.1:56469 - "POST /session HTTP/1.1" 200
+127.0.0.1:56469 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\zdgeorgi\PycharmProjects\bidnamic-python-challenge1\endpoints\search.py", line 51, in search
+    result = session.query(by_alias).all()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 2139, in query
+    return self._query_cls(entities, self, **kwargs)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 180, in __init__
+    self._set_entities(entities)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 187, in _set_entities
+    self._raw_columns = [
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 188, in <listcomp>
+    coercions.expect(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\coercions.py", line 188, in expect
+    resolved = impl._literal_coercion(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\coercions.py", line 388, in _literal_coercion
+    return self._text_coercion(element, argname, **kw)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\coercions.py", line 839, in _text_coercion
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Textual column expression '\nSELECT\n\ts.search_term,\n\t...' should be explicitly declared with text('\nSELECT\n\ts.search_term,\n\t...'), or use literal_column('\nSELECT\n\ts.search_term,\n\t...') for more specificity
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [7776]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56477 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\zdgeorgi\PycharmProjects\bidnamic-python-challenge1\endpoints\search.py", line 53, in search
+    return JSONResponse(result)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\responses.py", line 49, in __init__
+    self.body = self.render(content)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\responses.py", line 174, in render
+    return json.dumps(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Row is not JSON serializable
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [25732]
+Waiting for application startup.
+Application startup complete.
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [24856]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56501 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 138, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 1 validation error for SearchResponse
+response
+  value is not a valid dict (type=type_error.dict)
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [18084]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56515 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 138, in serialize_response
+    raise ValidationError(errors, field.type_)
+pydantic.error_wrappers.ValidationError: 6 validation errors for SearchResponse
+response -> total_users
+  field required (type=value_error.missing)
+response -> pages
+  field required (type=value_error.missing)
+response -> per_page
+  field required (type=value_error.missing)
+response -> current_page
+  field required (type=value_error.missing)
+response -> has_more
+  field required (type=value_error.missing)
+response -> data -> 0 -> name
+  field required (type=value_error.missing)
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [1932]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56521 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 200
+127.0.0.1:56526 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=88 HTTP/1.1" 200
+127.0.0.1:56526 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=-67 HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\zdgeorgi\PycharmProjects\bidnamic-python-challenge1\endpoints\search.py", line 51, in search
+    result = session.execute(by_alias).all()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidRowCountInLimitClause) LIMIT must not be negative
+
+[SQL: 
+SELECT
+	s.search_term,
+	c.structure_value,
+	count(s.conversion_value) as total_conversion_value,
+	count(s.cost) as total_cost,
+	s.conversion_value / s.cost as roas
+ FROM
+	search_terms AS s,
+	campaigns AS c
+ WHERE s.cost > 0 and s.campaign_id = c.campaign_id
+ GROUP BY
+	s.search_term,
+	c.structure_value,
+	roas
+ ORDER BY
+	roas DESC
+	LIMIT -67;      
+]
+(Background on this error at: https://sqlalche.me/e/14/9h9h)
+127.0.0.1:56527 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=67 HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 217, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\dependencies\utils.py", line 498, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\dependencies\utils.py", line 527, in solve_dependencies
+    solved = await call(**sub_values)
+  File "C:\Users\zdgeorgi\PycharmProjects\bidnamic-python-challenge1\core\authentication.py", line 51, in get_current_user
+    user = session.query(Users).filter(Users.email == token_data.username).first()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2810, in first
+    return self.limit(1)._iter().first()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.surname AS users_surname, users.summary AS users_summary, users.email AS users_email, users.password AS users_password, users.reg_date AS users_reg_date, users.is_verified AS users_is_verified, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'r00tme@abv.bg', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+127.0.0.1:56529 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=67 HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 217, in app
+    solved_result = await solve_dependencies(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\dependencies\utils.py", line 498, in solve_dependencies
+    solved_result = await solve_dependencies(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\dependencies\utils.py", line 527, in solve_dependencies
+    solved = await call(**sub_values)
+  File "C:\Users\zdgeorgi\PycharmProjects\bidnamic-python-challenge1\core\authentication.py", line 51, in get_current_user
+    user = session.query(Users).filter(Users.email == token_data.username).first()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2810, in first
+    return self.limit(1)._iter().first()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.surname AS users_surname, users.summary AS users_summary, users.email AS users_email, users.password AS users_password, users.reg_date AS users_reg_date, users.is_verified AS users_is_verified, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'r00tme@abv.bg', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+127.0.0.1:56530 - "POST /session HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\zdgeorgi\PycharmProjects\bidnamic-python-challenge1\endpoints\auth.py", line 32, in login_user
+    user: Users = session.query(Users).filter_by(email=data.username).first()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2810, in first
+    return self.limit(1)._iter().first()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.surname AS users_surname, users.summary AS users_summary, users.email AS users_email, users.password AS users_password, users.reg_date AS users_reg_date, users.is_verified AS users_is_verified, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'r00tme@abv.bg', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+127.0.0.1:56532 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56532 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:56532 - "POST /session HTTP/1.1" 500
+Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\middleware\message_logger.py", line 78, in __call__
+    await self.app(scope, inner_receive, inner_send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\starlette\routing.py", line 61, in app
+    response = await func(request)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\zdgeorgi\PycharmProjects\bidnamic-python-challenge1\endpoints\auth.py", line 32, in login_user
+    user: Users = session.query(Users).filter_by(email=data.username).first()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2810, in first
+    return self.limit(1)._iter().first()
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\query.py", line 2894, in _iter
+    result = self.session.execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\session.py", line 1692, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1620, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1487, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1851, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 2032, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\base.py", line 1808, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\zdgeorgi\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InternalError: (psycopg2.errors.InFailedSqlTransaction) current transaction is aborted, commands ignored until end of transaction block
+
+[SQL: SELECT users.id AS users_id, users.name AS users_name, users.surname AS users_surname, users.summary AS users_summary, users.email AS users_email, users.password AS users_password, users.reg_date AS users_reg_date, users.is_verified AS users_is_verified, users.role AS users_role 
+FROM users 
+WHERE users.email = %(email_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'email_1': 'r00tme@abv.bg', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/14/2j85)
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [20404]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56544 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56544 - "GET /openapi.json HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [10996]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:56552 - "GET /docs HTTP/1.1" 200
+127.0.0.1:56552 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:56552 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 401
+127.0.0.1:56553 - "POST /session HTTP/1.1" 200
+127.0.0.1:56553 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10 HTTP/1.1" 200
