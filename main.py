@@ -32,8 +32,6 @@ route = FastAPI(
     license_info=API.get("license")
 )
 
-route.mount("/static", StaticFiles(directory="static"), name="static")
-
 
 def custom_openapi():
     if route.openapi_schema:

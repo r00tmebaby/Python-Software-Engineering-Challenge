@@ -1,0 +1,14 @@
+Shutting down
+Will watch for changes in these directories: ['F:\\Programming\\Python\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+Started reloader process [4244] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [19432]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:3901 - "GET /docs HTTP/1.1" 200
+127.0.0.1:3901 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:3902 - "POST /session HTTP/1.1" 200
+127.0.0.1:3902 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10&page=1 HTTP/1.1" 200
+127.0.0.1:3925 - "GET /search?order_by=DESC&search_type=alias&sort_by=roas&limit=10&page=2 HTTP/1.1" 200
+127.0.0.1:3937 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10&page=2 HTTP/1.1" 200
