@@ -1,4 +1,4 @@
-<img src="logo.png" alt="drawing" width="500"/>
+<img src="static/logo.png" alt="drawing" width="500"/>
 
 ## Python Software Engineering Challenge
 

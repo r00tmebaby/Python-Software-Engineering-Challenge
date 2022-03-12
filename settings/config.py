@@ -1,11 +1,11 @@
 # Database Configuration
 # SQL alchemy database type. Current setup is with sqlite3db.
 
-DATABASE_URL = "postgresql://postgres:r00tme123@localhost:5432/bidnamic"
+DATABASE_URL = "postgresql://postgres:root123@localhost:5432/bidnamic"
 
 # Where the FastAPI will run
 HOST = "0.0.0.0"
-PORT = 80
+PORT = 8090
 
 # Swagger Documentation
 API = {"title": "Bidnamic 🚀"}
@@ -73,26 +73,26 @@ ERROR_DESCRIPTIONS_EN = {
 }
 
 
-"""
-    "title": "Bidnamic - API Documentation 🚀",
-    "license": {
-        "name": "Uvicorn",
-        "url": "https://www.uvicorn.org/",
-    },
-    "description": "Maximise revenue and profitability from Google Shopping with Bidnamic’s advanced machine 
-    learning and deep human expertise."
+API_DESCRIPTION = """
+
+### Maximise revenue and profitability from Google Shopping with Bidnamic’s advanced machine learning and deep human expertise.
 
 <hr>
 
-## 🔒 Authentication
+### 🔒 Authentication
 You will be able to:
 
 * **Login** - login using a valid email and password
 * **Logout** - to logout from the system 
 
-## 🙋 Users
+### 🙋 Users
 Only for registered users:
 * **View** personal information
+
+### 🔍 Search
+Only for registered users:
+* **The Top 10 Search** Terms should be based on aggregated cost and conversion value data
+
 
 <hr>
 """
