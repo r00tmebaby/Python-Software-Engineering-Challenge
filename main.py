@@ -74,7 +74,7 @@ async def repeater() -> None:
 
 
 @app.command()
-def run(create_db: bool = False):
+def run(create_db: bool = True):
     if create_db:
         # Adding csv records in the database if empty
         asyncio.run(add_records())

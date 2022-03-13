@@ -44,7 +44,7 @@ async def search(
                     "roas")
             ) \
                 .select_from(SearchItems) \
-                .filter(SearchItems.cost > 0) \
+                .filter(SearchItems.cost > 0, ) \
                 .group_by(SearchItems.search_term, SearchItems.campaign_id) \
                 .order_by(text(f'{sort_by} {order_by}')) \
                 .limit(limit).offset(page * (page + limit))
