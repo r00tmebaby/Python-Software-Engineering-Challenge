@@ -96,3 +96,7 @@ Application startup complete.
 127.0.0.1:35028 - "GET /search?order_by=ASC&search_type=alias&sort_by=roas&limit=10&page=2 HTTP/1.1" 401
 127.0.0.1:35028 - "GET /search?order_by=ASC&search_type=alias&sort_by=roas&limit=10&page=1 HTTP/1.1" 401
 StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [18832]
+Waiting for application startup.
+Application startup complete.
