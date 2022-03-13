@@ -1,10 +1,7 @@
-import datetime
-import time
-
 import bcrypt
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
-from settings.config import DEFAULT_DATE_FORMAT
+
 
 
 def hash_password(password: str) -> bytes:

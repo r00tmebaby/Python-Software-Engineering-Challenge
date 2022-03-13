@@ -17,6 +17,14 @@ class User(BaseModel):
     name: str
 
 
+class QueryModel(BaseModel):
+    campaign_id: int
+    search_term: str
+    total_cost: float
+    total_conversion_value: float
+    roas: float
+
+
 class UsersList(BaseModel):
     """ Will return information about all users"""
 

@@ -62,32 +62,3 @@ async def logged_user(current_user: Users = Depends(get_current_user)) -> (Users
 async def delete_expired_sessions():
     session.query(Sessions).filter(time.time() >= Sessions.expires_on).delete()
     session.commit()
-
-
-async def create_view():
-
-    session.execute(
-        """
-DROP VIEW IF EXISTS roas_view;
-CREATE view roas_view AS SELECT 
-s.search_term,
-C.structure_value,
-s.campaign_id,
-s.conversion_value,
-s."cost",
-s.ad_group_id,
-a."alias" 
-FROM
-	campaigns AS C,
-	search_terms AS s,
-	adgroups AS A 
-WHERE
-	C.campaign_id = s.campaign_id 
-	AND A.campaign_id = s.campaign_id 
-	AND A.ad_group_id = s.ad_group_id 
-	AND s.COST > 0 AND s.conversion_value > 0;
-        """
-    )
-    session.commit()
-
-

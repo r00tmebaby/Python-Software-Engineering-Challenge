@@ -1,7 +1,4 @@
-import dataclasses
-
 from fastapi import APIRouter, Depends
-from pydantic import BaseModel
 from sqlalchemy import text
 from starlette import status
 from starlette.responses import JSONResponse
@@ -15,18 +12,11 @@ import sqlalchemy
 from models import database
 from models.database import Users, Campaigns, SearchItems, AddGroups
 from models.requests import SearchTypes, OrderTypes, OrderBy
+from models.responses import QueryModel
 from settings.config import INVALID_USER_ID
 from fastapi.encoders import jsonable_encoder
 
 router = APIRouter()
-
-
-class QueryModel(BaseModel):
-    campaign_id: int
-    search_term: str
-    total_cost: float
-    total_conversion_value: float
-    roas: float
 
 
 @router.get("/search", name="Search 🟩", tags=["Search"])

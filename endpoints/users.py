@@ -56,8 +56,7 @@ async def get_current_user(current_user: Users = Depends(logged_user)) -> JSONRe
 @router.get(
     path="/user/{user_id}",
     tags=["Admin"],
-    name="Get User Information by ID 🟩",
-    description="* Get limited user information (TBD)"
+    name="Get User Information by ID 🟩"
 )
 async def get_user_by_id(user_id: int):
     user_data: Users = session.query(database.Users).filter_by(id=user_id).first()

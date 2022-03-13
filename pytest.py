@@ -1,17 +1,8 @@
 import asyncio
 import os
-import subprocess
 import threading
 import unittest
-
-from cffi.setuptools_ext import execfile
-
 from core.connect import session, add_records
-from models.database import *
-from core import connect
-import requests
-from subprocess import call
-
 from settings import config
 
 

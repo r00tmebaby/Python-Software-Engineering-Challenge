@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Form
-from starlette import status
 
 from core.authentication import *
 from core.exception_handler import BidNamic_Exception
