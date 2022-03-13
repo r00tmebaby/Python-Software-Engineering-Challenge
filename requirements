@@ -1,0 +1,13 @@
+python-jose
+fastapi
+psycopg2
+bcrypt
+typer
+fastapi_utils
+python-multipart
+validators
+uvicorn
+sqlalchemy
+pandas
+sqlalchemy_utils
+typing

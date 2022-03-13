@@ -12,3 +12,60 @@ Application startup complete.
 127.0.0.1:3902 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10&page=1 HTTP/1.1" 200
 127.0.0.1:3925 - "GET /search?order_by=DESC&search_type=alias&sort_by=roas&limit=10&page=2 HTTP/1.1" 200
 127.0.0.1:3937 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10&page=2 HTTP/1.1" 200
+StatReload detected file change in 'endpoints\search.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [2084]
+Waiting for application startup.
+Application startup complete.
+StatReload detected file change in 'main.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [25464]
+Waiting for application startup.
+Application startup complete.
+StatReload detected file change in 'main.py'. Reloading...
+The --reload flag should not be used in production on Windows.
+Started server process [21724]
+Waiting for application startup.
+Application startup complete.
+Shutting down
+Stopping reloader process [4244]
+Will watch for changes in these directories: ['F:\\Programming\\Python\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+Started reloader process [8664] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [3848]
+Waiting for application startup.
+Application startup complete.
+Shutting down
+Stopping reloader process [8664]
+Will watch for changes in these directories: ['F:\\Programming\\Python\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+Started reloader process [5520] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [10108]
+Waiting for application startup.
+Application startup complete.
+Shutting down
+Waiting for application shutdown.
+Application shutdown complete.
+Finished server process [10108]
+Stopping reloader process [5520]
+Will watch for changes in these directories: ['F:\\Programming\\Python\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+Started reloader process [16348] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [22816]
+Waiting for application startup.
+Application startup complete.
+Stopping reloader process [16348]
+Will watch for changes in these directories: ['F:\\Programming\\Python\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+Started reloader process [23540] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [17012]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:4630 - "GET / HTTP/1.1" 307
+127.0.0.1:4630 - "GET /docs HTTP/1.1" 200
+127.0.0.1:4630 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:4630 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10&page=1 HTTP/1.1" 401

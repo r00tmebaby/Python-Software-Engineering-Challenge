@@ -29,7 +29,7 @@ class QueryModel(BaseModel):
     roas: float
 
 
-@router.get("/search", name="Search", tags=["Search"])
+@router.get("/search", name="Search 🟩", tags=["Search"])
 async def search(
         order_by: OrderTypes,
         search_type: SearchTypes,

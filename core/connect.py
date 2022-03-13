@@ -1,4 +1,3 @@
-import asyncio
 import os.path
 import sys
 from typing import Any, Optional

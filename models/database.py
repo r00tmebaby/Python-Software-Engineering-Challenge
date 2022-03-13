@@ -1,10 +1,8 @@
 import time
 import bcrypt
-import sqlalchemy
 from sqlalchemy import *
-import sqlalchemy as sa
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy_utils import aggregated
+
 
 Base = declarative_base()
 

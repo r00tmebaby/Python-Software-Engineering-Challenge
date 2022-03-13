@@ -4,10 +4,8 @@ import pathlib
 
 import uvicorn
 from fastapi import FastAPI
-from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.openapi.utils import get_openapi
 from fastapi_utils.tasks import repeat_every
-from starlette.staticfiles import StaticFiles
 
 from core.authentication import delete_expired_sessions
 from core.connect import add_records
@@ -20,6 +18,9 @@ from endpoints import (
     search
 )
 from settings.config import API, HOST, PORT
+import typer
+
+app = typer.Typer()
 
 route = FastAPI(
     title=API.get("title"),
@@ -72,10 +73,11 @@ async def repeater() -> None:
     await delete_expired_sessions()
 
 
-if __name__ == '__main__':
-    # Adding csv records in the database if empty
-    asyncio.run(add_records())
-
+@app.command()
+def run(create_db: bool = False):
+    if create_db:
+        # Adding csv records in the database if empty
+        asyncio.run(add_records())
     uvicorn.run(
         "main:route",
         host=HOST,
@@ -84,3 +86,7 @@ if __name__ == '__main__':
         reload=True,
         log_config=f"{pathlib.Path(__file__).parent.resolve()}/Settings/server_logs.ini"
     )
+
+
+if __name__ == '__main__':
+    app()
