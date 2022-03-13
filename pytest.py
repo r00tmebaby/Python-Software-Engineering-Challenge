@@ -26,20 +26,26 @@ class TestDB(unittest.TestCase):
                 camp = ses.query(eval(each_table)).all()
         self.assertEqual(len(camp), 0, f"{each_table} table must have 0 records")
 
-    # def test_create(self):
-    #    asyncio.run(add_records())
-    #    with session as ses:
-    #        for each_table in self.__TABLES:
-    #            camp = ses.query(eval(each_table)).all()
-    #    self.assertGreater(len(camp), 0x186A0, f"{each_table} table must have at least 100k records")
+    def test_create(self):
+        asyncio.run(add_records())
+        with session as ses:
+            for each_table in self.__TABLES:
+                camp = ses.query(eval(each_table)).all()
+        self.assertGreater(len(camp), 0x186A0, f"{each_table} table must have at least 100k records")
 
 
 class TestWebServer(unittest.TestCase):
     __IS_ONLINE: bool = False
 
     def test_web_server(self):
-        self.is_online = os.system(f"ping -c 1 {config.HOST}:{config.PORT}") == 0  # is the server currently online
-        self.assertFalse(self.is_online)
+        self.__IS_ONLINE = os.system(f"ping -c 1 {config.HOST}:{config.PORT}") == 0  # is the server currently online
+        self.assertFalse(self.__IS_ONLINE)
+
+        #TODO Create server, check if it is available
+        #  -- Test Boundary conditions --
+        # 1. Login, Logout check locked endpoints
+        # 2. Add user, list users
+        # 3. Check Search endpoint
 
 
 if __name__ == '__main__':
