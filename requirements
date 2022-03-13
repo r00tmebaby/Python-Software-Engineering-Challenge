@@ -11,3 +11,4 @@ sqlalchemy
 pandas
 sqlalchemy_utils
 typing
+requests
