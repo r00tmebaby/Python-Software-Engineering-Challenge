@@ -13,7 +13,6 @@ from models import database
 from models.database import Users, Campaigns, SearchItems, AddGroups
 from models.requests import SearchTypes, OrderTypes, OrderBy
 from models.responses import QueryModel
-from settings.config import INVALID_USER_ID
 from fastapi.encoders import jsonable_encoder
 
 router = APIRouter()
@@ -50,7 +49,7 @@ async def search(
                 .order_by(text(f'{sort_by} {order_by}')) \
                 .limit(limit).offset(page * (page + limit))
 
-            test = []
+            result = []
             for found_items in search_items:
                 found_items: QueryModel
 
@@ -71,7 +70,7 @@ async def search(
                         .one()
 
                 # Adding structure value from campaign table
-                test.append(
+                result.append(
                     [
                         search_switch.structure_value if search_type == "structure_value" else search_switch.alias,
                         found_items.search_term,
@@ -81,6 +80,6 @@ async def search(
                     ]
                 )
 
-        return jsonable_encoder({"data": test})
-    raise BidNamic_Exception(error_code=INVALID_USER_ID, status_code=status.HTTP_400_BAD_REQUEST)
+        return jsonable_encoder({"data": result})
+    raise BidNamic_Exception(error_code=ResourceWarning, status_code=status.HTTP_400_BAD_REQUEST)
 

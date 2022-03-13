@@ -69,3 +69,30 @@ Waiting for application startup.
 Application startup complete.
 Shutting down
 Stopping reloader process [25832]
+Will watch for changes in these directories: ['F:\\Programming\\Python\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+Started reloader process [25552] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [25772]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:34895 - "GET / HTTP/1.1" 307
+127.0.0.1:34895 - "GET /docs HTTP/1.1" 200
+127.0.0.1:34895 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:34896 - "GET /search?order_by=DESC&search_type=alias&sort_by=roas&limit=10&page=1 HTTP/1.1" 401
+Shutting down
+Stopping reloader process [25552]
+Will watch for changes in these directories: ['F:\\Programming\\Python\\bidnamic-python-challenge1']
+Uvicorn running on http://0.0.0.0:8090 (Press CTRL+C to quit)
+Started reloader process [5560] using statreload
+The --reload flag should not be used in production on Windows.
+Started server process [4100]
+Waiting for application startup.
+Application startup complete.
+127.0.0.1:35027 - "GET / HTTP/1.1" 307
+127.0.0.1:35027 - "GET /docs HTTP/1.1" 200
+127.0.0.1:35027 - "GET /openapi.json HTTP/1.1" 200
+127.0.0.1:35027 - "GET /search?order_by=DESC&search_type=structure_value&sort_by=roas&limit=10&page=1 HTTP/1.1" 401
+127.0.0.1:35028 - "GET /search?order_by=ASC&search_type=alias&sort_by=roas&limit=10&page=2 HTTP/1.1" 401
+127.0.0.1:35028 - "GET /search?order_by=ASC&search_type=alias&sort_by=roas&limit=10&page=1 HTTP/1.1" 401
+StatReload detected file change in 'endpoints\search.py'. Reloading...
