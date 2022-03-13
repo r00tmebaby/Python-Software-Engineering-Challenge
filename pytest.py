@@ -3,7 +3,9 @@ import os
 import threading
 import unittest
 from core.connect import session, add_records
+
 from settings import config
+from models.database import *
 
 
 class TestDB(unittest.TestCase):
@@ -32,7 +34,7 @@ class TestWebServer(unittest.TestCase):
         self.__IS_ONLINE = os.system(f"ping -c 1 {config.HOST}:{config.PORT}") == 0  # is the server currently online
         self.assertFalse(self.__IS_ONLINE)
 
-        #TODO Create server, check if it is available
+        # TODO Create server, check if it is available
         #  -- Test Boundary conditions --
         # 1. Login, Logout check locked endpoints
         # 2. Add user, list users
