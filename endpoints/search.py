@@ -52,22 +52,14 @@ async def search(
             result = []
             for found_items in search_items:
                 found_items: QueryModel
+                switch_table = "Campaigns" if search_type == "structure_value" else "AddGroups"
 
-                if search_type == "structure_value":
-                    # Querying the campaign table and remove any (campaign_id) duplicates
-                    search_switch: Campaigns = ses \
-                        .query(Campaigns) \
-                        .distinct(Campaigns.campaign_id) \
-                        .filter(found_items.campaign_id == Campaigns.campaign_id) \
-                        .one()
-                else:
-
-                    # Querying the adgroups table and remove any (campaign_id) duplicates
-                    search_switch: AddGroups = ses \
-                        .query(AddGroups) \
-                        .distinct(AddGroups.campaign_id) \
-                        .filter(found_items.campaign_id == AddGroups.campaign_id) \
-                        .one()
+                # Switching the tables based on search criteria
+                search_switch: eval(switch_table) = ses \
+                    .query(eval(switch_table)) \
+                    .distinct(eval(switch_table).campaign_id) \
+                    .filter(found_items.campaign_id == eval(switch_table).campaign_id) \
+                    .one()
 
                 # Adding structure value from campaign table
                 result.append(
@@ -82,4 +74,3 @@ async def search(
 
         return jsonable_encoder({"data": result})
     raise BidNamic_Exception(error_code=ResourceWarning, status_code=status.HTTP_400_BAD_REQUEST)
-
