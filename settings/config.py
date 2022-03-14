@@ -5,7 +5,7 @@ DATABASE_URL = "postgresql://postgres:root123@localhost:5432/bidnamic"
 
 # Where the FastAPI will run
 HOST = "0.0.0.0"
-PORT = 8090
+PORT = 8050
 
 # Swagger Documentation
 API = {"title": "Bidnamic 🚀"}
