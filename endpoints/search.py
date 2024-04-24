@@ -20,57 +20,53 @@ router = APIRouter()
 
 @router.get("/search", name="Search 🟩", tags=["Search"])
 async def search(
-        order_by: OrderTypes,
-        search_type: SearchTypes,
-        sort_by: OrderBy,
-        limit: int = 10,
-        page: int = 1,
-        current_user: Users = Depends(logged_user)
+    order_by: OrderTypes,
+    search_type: SearchTypes,
+    sort_by: OrderBy,
+    limit: int = 10,
+    page: int = 1,
+    current_user: Users = Depends(logged_user),
+    db: Session = Depends(get_database_session)
 ) -> JSONResponse:
-    user_data: Users = session.query(database.Users).filter_by(email=current_user.email).first()
-    if user_data is not None:
+    user_data = db.query(Users).filter_by(email=current_user.email).first()
+    if user_data is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
 
-        limit = limit if limit > 0 else 10
-        page = page if page > 0 else 1
+    # Adjust the limit and page values
+    limit = max(limit, 1)
+    offset = (page - 1) * limit
 
-        with session as ses:
-            # Querying the campaign
-            search_items = ses.query(
-                SearchItems.campaign_id,
-                SearchItems.search_term,
-                sqlalchemy.func.sum(SearchItems.cost).label('total_cost'),
-                sqlalchemy.func.sum(SearchItems.conversion_value).label('total_conversion_value'),
-                (sqlalchemy.func.sum(SearchItems.conversion_value) / sqlalchemy.func.sum(SearchItems.cost)).label(
-                    "roas")
-            ) \
-                .select_from(SearchItems) \
-                .filter(SearchItems.cost > 0, ) \
-                .group_by(SearchItems.search_term, SearchItems.campaign_id) \
-                .order_by(text(f'{sort_by} {order_by}')) \
-                .limit(limit).offset(page * (page + limit))
+    # Mapping to avoid eval
+    table_mapping = {
+        "structure_value": Campaigns,
+        "add_groups": AddGroups
+    }
 
-            result = []
-            for found_items in search_items:
-                found_items: QueryModel
-                switch_table = "Campaigns" if search_type == "structure_value" else "AddGroups"
+    # Prepare the base query
+    search_items = db.query(
+        SearchItems.campaign_id,
+        SearchItems.search_term,
+        func.sum(SearchItems.cost).label('total_cost'),
+        func.sum(SearchItems.conversion_value).label('total_conversion_value'),
+        (func.sum(SearchItems.conversion_value) / func.sum(SearchItems.cost)).label("roas")
+    ).filter(SearchItems.cost > 0).group_by(
+        SearchItems.search_term, SearchItems.campaign_id
+    ).order_by(text(f'{sort_by} {order_by}')).limit(limit).offset(offset)
 
-                # Switching the tables based on search criteria
-                search_switch: eval(switch_table) = ses \
-                    .query(eval(switch_table)) \
-                    .distinct(eval(switch_table).campaign_id) \
-                    .filter(found_items.campaign_id == eval(switch_table).campaign_id) \
-                    .one()
+    result = []
+    for found_items in search_items:
+        target_table = table_mapping.get(search_type)
+        search_switch = db.query(target_table).distinct(target_table.campaign_id).filter(
+            target_table.campaign_id == found_items.campaign_id
+        ).one_or_none()
 
-                # Adding structure value from campaign table
-                result.append(
-                    [
-                        search_switch.structure_value if search_type == "structure_value" else search_switch.alias,
-                        found_items.search_term,
-                        found_items.total_cost,
-                        found_items.total_conversion_value,
-                        found_items.roas
-                    ]
-                )
+        if search_switch:
+            result.append({
+                "structure_value": search_switch.structure_value if search_type == "structure_value" else search_switch.alias,
+                "search_term": found_items.search_term,
+                "total_cost": found_items.total_cost,
+                "total_conversion_value": found_items.total_conversion_value,
+                "roas": found_items.roas
+            })
 
-        return jsonable_encoder({"data": result})
-    raise BidNamic_Exception(error_code=ResourceWarning, status_code=status.HTTP_400_BAD_REQUEST)
+    return JSONResponse(content={"data": result})
